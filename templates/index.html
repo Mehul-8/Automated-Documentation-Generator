@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automated Documentation Generator</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Automated Documentation Generator</h1>
+
+    <div class="upload-section">
+        <label class="upload-box" for="fileInput">
+            <input type="file" id="fileInput" accept=".zip,.png,.jpg,.jpeg,.webp">
+            <span id="fileLabel">Upload codebase (.zip) or circuit schematic (image)</span>
+        </label>
+        <button id="generateBtn" disabled>Generate Documentation</button>
+    </div>
+
+    <div class="output-section" id="outputSection" style="display:none;">
+        <div class="output-header">
+            <span id="statusText">Generating...</span>
+            <button id="downloadBtn" style="display:none;">Download Markdown</button>
+        </div>
+        <div class="output-content" id="outputContent"></div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

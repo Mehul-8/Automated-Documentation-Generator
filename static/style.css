@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0d0d0d;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.upload-box {
+    border: 1px dashed #444;
+    border-radius: 6px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.upload-box:hover {
+    border-color: #888;
+}
+
+.upload-box input {
+    display: none;
+}
+
+#fileLabel {
+    font-size: 14px;
+    color: #999;
+}
+
+button {
+    background: #1a1a1a;
+    color: #e0e0e0;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background: #2a2a2a;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.output-section {
+    border: 1px solid #333;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #161616;
+    border-bottom: 1px solid #333;
+    font-size: 13px;
+    color: #999;
+}
+
+.output-content {
+    padding: 20px;
+    line-height: 1.6;
+    font-size: 14px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.output-content pre {
+    background: #161616;
+    padding: 12px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.output-content code {
+    background: #161616;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.output-content h1, .output-content h2, .output-content h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.output-content table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.output-content th, .output-content td {
+    border: 1px solid #333;
+    padding: 6px 10px;
+}
